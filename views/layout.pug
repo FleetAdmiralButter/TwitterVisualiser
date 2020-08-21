@@ -1,0 +1,74 @@
+//-Layout file with navbar that is added to all PUGs
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no")
+    meta(http-equiv="x-ua-compatible" content="ie=edge")
+
+    //- put scripts at the bottom of page, past the content block
+    block head
+      //- fonts
+      script(src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous")
+
+      link(rel='stylesheet' href='https://use.fontawesome.com/releases/v5.3.1/css/all.css' integrity='sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU' crossorigin='anonymous')
+      link(rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons")
+      
+      //- css
+      link(type="text/css" rel="stylesheet" href="/stylesheets/css/materialize.min.css" media="screen,projection")
+      link(type="text/css" rel="stylesheet" href="/stylesheets/css/style.css" media="screen,projection")
+
+  body
+    ul#dropdown1.dropdown-content
+      li
+        a(href='/auto') Data Collection
+      li
+        a(href='/check') Manual Checking
+    ul#dropdown2.dropdown-content
+      li
+        a(href='/auto') Data Collection
+      li
+        a(href='/check') Manual Checking
+    nav.grey.darken-4(role="navigation")
+      .nav-wrapper.container
+        a#logo-container.brand-logo(href="/") VisCrime
+        a.sidenav-trigger(href="#" data-target="mobile-menu")
+          i.fas.fa-bars
+        ul.right.hide-on-med-and-down
+          li
+            a.valign-wrapper(href="/deckmap")
+              i.fas.fa-map-marker-alt.viscrime-navicon
+              span Explore 
+          li
+            a.valign-wrapper(href="/lookup/api")
+              i.fas.fa-search.viscrime-navicon
+              span Lookup  
+          li
+            a.dropdown-trigger-nav.valign-wrapper(href='#' data-target='dropdown1')
+              i.fas.fa-cog.viscrime-navicon
+              span Config
+              i.material-icons arrow_drop_down
+    ul#mobile-menu.sidenav
+      li
+        a.valign-wrapper(href="/deckmap")
+          i.fas.fa-map-marker-alt.viscrime-navicon
+          span Explore 
+      li
+        a.valign-wrapper(href="/lookup/api")
+          i.fas.fa-search.viscrime-navicon
+          span Lookup  
+      li
+        a.dropdown-trigger-sidenav.valign-wrapper(href='#' data-target='dropdown2')
+          i.fas.fa-cog.viscrime-navicon
+          span Config
+          i.material-icons.right arrow_drop_down
+
+    //- main content, this section will be replaced by other pugs
+    block content
+
+    //- scripts
+    //- external
+    script(type="text/javascript" src="/stylesheets/js/materialize.min.js")
+    script(type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js") 
+    //- internal
+    script(type="text/javascript" src="/scripts/setupLayout.js")
