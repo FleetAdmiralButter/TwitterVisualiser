@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
+    "preinstall": "npm ci || exit 0",
     "start": "node start",
     "test": "mocha --timeout 90000 --exit",
     "dev": "nodemon start -e js,pug"
