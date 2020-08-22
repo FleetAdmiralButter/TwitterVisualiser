@@ -6,6 +6,8 @@ WORKDIR /home/node/app
 
 COPY package*.json ./
 
+RUN apk --no-cache add g++ gcc libgcc libstdc++ linux-headers make python
+
 USER node
 
 RUN npm install || exit 0

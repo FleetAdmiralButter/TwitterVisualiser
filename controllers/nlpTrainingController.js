@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 var db = require('./mongoController');
-const pythonShell = require('python-shell');
-const pty = require('node-pty');
+// const pythonShell = require('python-shell');
+// const pty = require('node-pty');
 
 //Checks parameters and then returns data from the database based on this.
 exports.returnNLPData = async (req, res) => {
