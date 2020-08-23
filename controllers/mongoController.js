@@ -4,9 +4,9 @@ const crime = require('../models/crime_schema');
 const ObjectId = require('mongodb').ObjectId;
 const spawn = require('threads').spawn;
 const connectionTimeout = 1500;
-const databaseMelb = {location: "Melbourne", url : "mongodb://team:swinburne@136.186.108.40/tweets", type: "Production"};
-const databaseChicago = {location: "Chicago", url : "mongodb://team:swinburne@136.186.108.40/tweetsChicago", type: "Production"};
-const databaseChicagoCrime = {location:"Chicago Crime", url : "mongodb://team:swinburne@136.186.108.40/chicagoCrime", type: "Production"};
+const databaseMelb = {location: "Melbourne", url : "mongodb://team:swinburne@mongodb.memenet-mongodb.svc/tweets", type: "Production"};
+const databaseChicago = {location: "Chicago", url : "mongodb://team:swinburne@mongodb.memenet-mongodb.svc/tweetsChicago", type: "Production"};
+const databaseChicagoCrime = {location:"Chicago Crime", url : "mongodb://team:swinburne@mongodb.memenet-mongodb.svc/chicagoCrime", type: "Production"};
 const connectFailure = function() {console.log("This will abort the NodeJS process.");}
 
 init();
